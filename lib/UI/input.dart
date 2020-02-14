@@ -92,7 +92,9 @@ class MyInputFormState extends State<InputForm> {
         labelText: 'word',
       ),
       onSaved: (String value) {
-        data.word = value;
+        setState(() {
+          data.word = value;
+        });
       },
       validator: (value) {
         if (value.isEmpty) {
